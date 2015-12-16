@@ -5,6 +5,7 @@
 
     <Button
         android:layout_marginTop="30dp"
+        android:id="@+id/btnSend"
         android:gravity="center"
         android:text="Send"
         android:textSize="30dp"
@@ -12,6 +13,7 @@
         android:layout_height="wrap_content" />
 
     <TextView
+        android:id="@+id/starting_point"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
@@ -22,9 +24,11 @@
         android:textSize="30dp"
         android:textStyle="bold"/>
     <EditText
+        android:id="@+id/starting_point_text"
         android:layout_width="match_parent"
         android:layout_height="50dp" />
     <TextView
+        android:id="@+id/ending_point"
         android:layout_marginTop="30dp"
         android:layout_marginBottom="10dp"
         android:layout_width="match_parent"
@@ -35,6 +39,7 @@
         android:textSize="30dp"
         android:textStyle="bold"/>
     <EditText
+        android:id="@+id/ending_point_text"
         android:layout_width="match_parent"
         android:layout_height="50dp" />
 </LinearLayout>
