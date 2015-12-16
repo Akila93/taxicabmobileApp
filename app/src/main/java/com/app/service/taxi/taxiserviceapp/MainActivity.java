@@ -32,9 +32,9 @@ public class MainActivity extends AppCompatActivity {
                 try{
                     sleep(3000);
                 }catch(Exception e){
-                
+
                 }finally {
-                    Intent startIntent = new Intent("com.app.taxi.service.SEND_ACTIVITY");
+                    Intent startIntent = new Intent("com.app.taxi.service.LOGIN_ACTIVITY");
                     startActivity(startIntent);
                 }
             }
