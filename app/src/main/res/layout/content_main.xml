@@ -4,16 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="@drawable/taxicab"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
     tools:context="com.app.service.taxi.taxiserviceapp.MainActivity"
     tools:showIn="@layout/activity_main">
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/Wellcome"
+        android:gravity="center"
+        android:layout_centerInParent="false"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!" />
+        android:textColor="@android:color/white"
+        android:textSize="50dp"
+        android:text="you are Wellcome!"
+        android:textStyle="bold"
+        />
+
 </RelativeLayout>
