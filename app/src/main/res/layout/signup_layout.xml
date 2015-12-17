@@ -33,17 +33,22 @@
         android:id="@+id/editText"
         android:layout_marginBottom="20dp"/>
 
-    <Switch
+    <RadioButton
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:text="Customer/Driver"
+        android:text="Customer"
         android:textSize="30dp"
-        android:gravity="center"
-        android:id="@+id/sw_dri_cus"
-        android:layout_gravity="center_horizontal"
-
-        android:layout_marginBottom="20dp"
-        tools:targetApi="ice_cream_sandwich" />
+        android:id="@+id/radioBtnCust_signup"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"/>
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Driver"
+        android:textSize="30dp"
+        android:id="@+id/radioBtnDriv_signup"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"/>
     <Button
         android:layout_marginTop="10dp"
         android:layout_width="fill_parent"

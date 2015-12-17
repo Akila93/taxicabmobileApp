@@ -13,19 +13,13 @@ public class AccessTabActivity extends TabActivity {
 
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.access_layout);
 
-        TabHost tabHost = getTabHost();
 
-        TabHost.TabSpec tab1 = tabHost.newTabSpec("Tab1");
-        tab1.setIndicator("LoginActivity");
-        Intent tab1Intent = new Intent("com.app.taxi.service.LOGIN_ACTIVITY");
-        tab1.setContent(tab1Intent);
+        TabHost mTabHost = getTabHost();
 
-        TabHost.TabSpec tab2 = tabHost.newTabSpec("Tab2");
-        tab1.setIndicator("SignUpActivity");
-        Intent tab2Intent = new Intent("com.app.taxi.service.SIGNUP_ACTIVITY");
-        tab1.setContent(tab2Intent);
+        mTabHost.addTab(mTabHost.newTabSpec("first").setIndicator("First").setContent(new Intent(this  ,LoginActivity.class )));
+        mTabHost.addTab(mTabHost.newTabSpec("second").setIndicator("Second").setContent(new Intent(this , SignUpActivity.class )));
+        mTabHost.setCurrentTab(0);
 
     }
 }

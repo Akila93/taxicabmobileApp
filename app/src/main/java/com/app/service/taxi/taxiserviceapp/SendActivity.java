@@ -1,6 +1,7 @@
 package com.app.service.taxi.taxiserviceapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 
 /**
@@ -11,6 +12,7 @@ public class SendActivity extends Activity{
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.sms_layout);
+
     }
 
 }
