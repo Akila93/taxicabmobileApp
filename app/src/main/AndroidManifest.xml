@@ -39,11 +39,31 @@
 
         </activity>
         <activity
+            android:name=".RequestsActivity"
+            android:label="@string/app_name">
+
+        </activity>
+        <activity
+            android:name=".ProfileActivity"
+            android:label="@string/app_name">
+
+        </activity>
+        <activity
             android:name=".AccessTabActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="com.app.taxi.service.ACCESS_TAB_ACTIVITY" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".MainTabHostActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="com.app.taxi.service.MAIN_TABHOST_WINDOW" />
 
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>

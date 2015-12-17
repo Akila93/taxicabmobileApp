@@ -17,8 +17,8 @@ public class AccessTabActivity extends TabActivity {
 
         TabHost mTabHost = getTabHost();
 
-        mTabHost.addTab(mTabHost.newTabSpec("first").setIndicator("First").setContent(new Intent(this  ,LoginActivity.class )));
-        mTabHost.addTab(mTabHost.newTabSpec("second").setIndicator("Second").setContent(new Intent(this , SignUpActivity.class )));
+        mTabHost.addTab(mTabHost.newTabSpec("first").setIndicator("Login").setContent(new Intent(this  ,LoginActivity.class )));
+        mTabHost.addTab(mTabHost.newTabSpec("second").setIndicator("SignUp").setContent(new Intent(this , SignUpActivity.class )));
         mTabHost.setCurrentTab(0);
 
     }
