@@ -1,1 +1,3 @@
 include ':app'
+include ':libraries:library'
+project(':libraries:library').projectDir = new File('libraries/library/app')

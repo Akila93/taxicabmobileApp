@@ -22,4 +22,8 @@ public class AccessTabActivity extends TabActivity {
         mTabHost.setCurrentTab(0);
 
     }
+    protected void onPause(){
+        super.onPause();
+        finish();
+    }
 }

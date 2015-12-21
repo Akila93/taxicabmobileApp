@@ -14,9 +14,13 @@ public class MainTabHostActivity extends TabActivity {
 
         TabHost mTabHost = getTabHost();
 
-        mTabHost.addTab(mTabHost.newTabSpec("first").setIndicator("Profile").setContent(new Intent(this  ,ProfileActivity.class )));
+        Intent profileIntent = new Intent(this  ,ProfileActivity.class );
+        profileIntent.putExtra("isCustomer",getIntent().getBooleanExtra("isCustomer",true));
+
+        mTabHost.addTab(mTabHost.newTabSpec("first").setIndicator("Profile").setContent(profileIntent));
         mTabHost.addTab(mTabHost.newTabSpec("second").setIndicator("Notification").setContent(new Intent(this , RequestsActivity.class )));
         mTabHost.addTab(mTabHost.newTabSpec("third").setIndicator("Massage").setContent(new Intent(this  ,SendActivity.class )));
         mTabHost.setCurrentTab(0);
     }
+
 }

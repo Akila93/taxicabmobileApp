@@ -2,5 +2,154 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit"
+        android:id="@+id/editBtn"
+        android:textSize="30dp"/>
+<ScrollView android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="User name"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp"/>
+    <edu.ubbdroid.android.widget.EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_name"
+        android:layout_marginBottom="20dp"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp"/>
+
+    <edu.ubbdroid.android.widget.EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/profile_pass"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Confirm Password"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp"/>
+
+    <edu.ubbdroid.android.widget.EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/profile_confirmedPass"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Enter NIC"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp"/>
+
+    <edu.ubbdroid.android.widget.EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/profile_NIC"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="License Number"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp"/>
+
+    <edu.ubbdroid.android.widget.EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/profile_licenseNumber"
+        android:layout_marginBottom="20dp"/>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Phone Number"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp"/>
+
+    <edu.ubbdroid.android.widget.EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:id="@+id/profile_phoneNumber"
+        android:layout_marginBottom="20dp"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="City"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp"/>
+    <edu.ubbdroid.android.widget.EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_city"
+        android:layout_marginBottom="20dp"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Street"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp"/>
+    <edu.ubbdroid.android.widget.EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_street"
+        android:layout_marginBottom="20dp"/>
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Door number"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp"/>
+    <edu.ubbdroid.android.widget.EditText
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/profile_door_num"
+        android:layout_marginBottom="20dp"/>
 </LinearLayout>
+</ScrollView></LinearLayout>

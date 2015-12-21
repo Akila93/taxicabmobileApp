@@ -29,9 +29,32 @@ public class LoginActivity extends Activity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 Intent startIntent = new Intent("com.app.taxi.service.MAIN_TABHOST_WINDOW");
+                startIntent.putExtra("isCustomer",customer.isChecked());
                 startActivity(startIntent);
             }
         });
+
+        customer.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                driver.setChecked(false);
+                customer.setChecked(true);
+            }
+        });
+
+        driver.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                driver.setChecked(true);
+                customer.setChecked(false);
+            }
+        });
+    }
+
+    protected void onPause(){
+        super.onPause();
+        //finish();
     }
 }
