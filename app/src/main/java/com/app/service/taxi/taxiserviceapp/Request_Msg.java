@@ -7,6 +7,15 @@ public class Request_Msg {
 
     private String msg,status;
     private boolean accepted;
+    private double minimum_amount;
+
+    public double getMinimum_amount(){
+        return minimum_amount;
+    }
+
+    public void setMinimum_amount(double minimum_amount){
+        this.minimum_amount= minimum_amount;
+    }
 
     public Request_Msg(String msg) {
         this.msg = msg;

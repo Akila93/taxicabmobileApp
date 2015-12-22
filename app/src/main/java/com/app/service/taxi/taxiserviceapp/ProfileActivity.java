@@ -1,6 +1,7 @@
 package com.app.service.taxi.taxiserviceapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -12,7 +13,7 @@ import android.widget.EditText;
 public class ProfileActivity extends Activity {
     private boolean isCustomer;
     private EditText name,pass,confirm_pass,NIC,license_no,phone_no,city,street,door_no;
-    private Button edit;
+    private Button edit,logout;
 
 
     public void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,7 @@ public class ProfileActivity extends Activity {
         setContentView(R.layout.profile_layout);
         this.isCustomer = getIntent().getBooleanExtra("isCustomer", true);
 
+        logout = (Button)findViewById(R.id.logoutBtn);
         name = (EditText)findViewById(R.id.profile_name);
         pass = (EditText)findViewById(R.id.profile_pass);
         confirm_pass = (EditText)findViewById(R.id.profile_confirmedPass);
@@ -30,6 +32,15 @@ public class ProfileActivity extends Activity {
         street = (EditText)findViewById(R.id.profile_street);
         door_no = (EditText)findViewById(R.id.profile_door_num);
         edit = (Button)findViewById(R.id.editBtn);
+
+        logout.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent startIntent = new Intent("com.app.taxi.service.ACCESS_TAB_ACTIVITY");
+                startActivity(startIntent);
+                finish();
+            }
+        });
 
         name.setEnabled(false);
         pass.setEnabled(false);

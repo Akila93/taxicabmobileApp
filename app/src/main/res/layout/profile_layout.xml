@@ -3,11 +3,18 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
     <Button
+        android:layout_marginTop="30dp"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:text="Edit"
         android:id="@+id/editBtn"
         android:textSize="30dp"/>
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Logout"
+        android:textSize="30dp"
+        android:id="@+id/logoutBtn"/>
 <ScrollView android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 <LinearLayout android:orientation="vertical" android:layout_width="match_parent"
@@ -151,5 +158,9 @@
         android:layout_height="wrap_content"
         android:id="@+id/profile_door_num"
         android:layout_marginBottom="20dp"/>
+
+
 </LinearLayout>
-</ScrollView></LinearLayout>
+</ScrollView>
+
+</LinearLayout>

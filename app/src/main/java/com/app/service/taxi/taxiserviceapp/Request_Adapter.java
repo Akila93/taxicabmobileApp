@@ -1,6 +1,8 @@
 package com.app.service.taxi.taxiserviceapp;
 
 import android.app.Activity;
+import android.content.Intent;
+import android.os.Handler;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,7 +11,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import java.util.Iterator;
 import java.util.List;
+
 
 /**
  * Created by Akila_chathuranga on 12/20/2015.
@@ -20,12 +24,16 @@ public class Request_Adapter extends ArrayAdapter<Request_Msg> {
     private final List<Request_Msg> list;
     private final Activity context;
     private final boolean customer_login;
+    private int lastFocussedPosition = -1;
+    private Handler handler = new Handler();
+    private RequestsActivity activity;
 
 
     static class ViewHolder {
         protected TextView msg,msg_status;
-        protected Button acceptBtn,cancelBtn;
+        protected Button detailBtn,cancelBtn,ratingBtn;
         protected EditText minimum_amount_text;
+
     }
     public Request_Adapter(Activity context, List<Request_Msg> list) {
         super(context, R.layout.row, list);
@@ -33,14 +41,15 @@ public class Request_Adapter extends ArrayAdapter<Request_Msg> {
         this.list = list;
         this.customer_login = false;
     }
-    public Request_Adapter(Activity context, List<Request_Msg> list, boolean customer_login) {
+    public Request_Adapter(Activity context, List<Request_Msg> list, boolean customer_login, RequestsActivity activity) {
         super(context, R.layout.row1, list);
         this.context = context;
         this.list = list;
         this.customer_login = customer_login;
+        this.activity = activity;
     }
     @Override
-    public View getView(int position, View convertView, ViewGroup parent) {
+    public View getView(final int position, View convertView, ViewGroup parent) {
 
         ViewHolder viewHolder = null;
 
@@ -55,6 +64,16 @@ public class Request_Adapter extends ArrayAdapter<Request_Msg> {
                 viewHolder.msg = (TextView) convertView.findViewById(R.id.request);
                 viewHolder.msg_status = (TextView) convertView.findViewById(R.id.request_status);
                 viewHolder.cancelBtn = (Button) convertView.findViewById(R.id.cancel_request);
+                viewHolder.ratingBtn = (Button) convertView.findViewById(R.id.rate_driver);
+
+                viewHolder.ratingBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent startIntent = new Intent("com.app.taxi.service.RATING_ACTIVITY");
+                        activity.startActivity(startIntent);
+
+                    }
+                });
                 viewHolder.cancelBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
@@ -70,19 +89,24 @@ public class Request_Adapter extends ArrayAdapter<Request_Msg> {
                 convertView = inflator.inflate(R.layout.row, null);
                 viewHolder = new ViewHolder();
                 viewHolder.msg = (TextView) convertView.findViewById(R.id.request1);
-                viewHolder.minimum_amount_text = (EditText) convertView.findViewById(R.id.minimum_amount);
+               // viewHolder.minimum_amount_text = (EditText) convertView.findViewById(R.id.minimum_amount);
                 viewHolder.msg_status = (TextView) convertView.findViewById(R.id.request_status1);
-                viewHolder.acceptBtn = (Button) convertView.findViewById(R.id.accept);
-                viewHolder.acceptBtn.setOnClickListener(new View.OnClickListener() {
+                viewHolder.detailBtn = (Button) convertView.findViewById(R.id.detailsBtn);
+
+
+
+
+                viewHolder.detailBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-
+                        Intent startIntent = new Intent("com.app.taxi.service.REQUEST_DETAILS_ACTIVITY");
+                        activity.startActivity(startIntent);
                     }
                 });
                 convertView.setTag(viewHolder);
                 convertView.setTag(R.id.request1, viewHolder.msg);
-                convertView.setTag(R.id.accept, viewHolder.acceptBtn);
-                convertView.setTag(R.id.minimum_amount,viewHolder.minimum_amount_text);
+                convertView.setTag(R.id.detailsBtn, viewHolder.detailBtn);
+                //convertView.setTag(R.id.minimum_amount,viewHolder.minimum_amount_text);
                 convertView.setTag(R.id.request_status1, viewHolder.msg_status);
             }
         } else {
@@ -91,6 +115,7 @@ public class Request_Adapter extends ArrayAdapter<Request_Msg> {
 
         viewHolder.msg.setText(list.get(position).getMsg());
         viewHolder.msg_status.setText(list.get(position).getStatus());
+        //viewHolder.minimum_amount_text.setText(new Double(list.get(position).getMinimum_amount()).toString());
         return convertView;
     }
 
