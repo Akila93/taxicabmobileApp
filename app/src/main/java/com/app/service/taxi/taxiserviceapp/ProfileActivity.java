@@ -16,6 +16,11 @@ public class ProfileActivity extends Activity {
     private Button edit,logout;
 
 
+    private void loadFields(){
+        // load account info from db to text fields using json. use my example in loginActivity.java.
+        //read php files in group chat.read JSONfunction.java for more.
+        //tip-> this.name.setText("Ak93");
+    }
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.profile_layout);
@@ -42,6 +47,8 @@ public class ProfileActivity extends Activity {
             }
         });
 
+        this.loadFields();
+
         name.setEnabled(false);
         pass.setEnabled(false);
         confirm_pass.setEnabled(false);
@@ -67,7 +74,11 @@ public class ProfileActivity extends Activity {
                 return;
             }
 
-            public void saveProfile(){}
+            public void saveProfile(){
+                //here u code how to save edited profile fields to db using json.use my example in loginActivity.java.
+                //if u need to change parameters of this method change.
+                //tip---this.name.getText(); to get name after editing.
+            }
 
             public void setProfileEditable(boolean value){
                 if(value){

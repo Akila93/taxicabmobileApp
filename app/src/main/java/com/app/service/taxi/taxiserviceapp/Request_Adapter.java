@@ -89,7 +89,6 @@ public class Request_Adapter extends ArrayAdapter<Request_Msg> {
                 convertView = inflator.inflate(R.layout.row, null);
                 viewHolder = new ViewHolder();
                 viewHolder.msg = (TextView) convertView.findViewById(R.id.request1);
-               // viewHolder.minimum_amount_text = (EditText) convertView.findViewById(R.id.minimum_amount);
                 viewHolder.msg_status = (TextView) convertView.findViewById(R.id.request_status1);
                 viewHolder.detailBtn = (Button) convertView.findViewById(R.id.detailsBtn);
 
@@ -106,7 +105,6 @@ public class Request_Adapter extends ArrayAdapter<Request_Msg> {
                 convertView.setTag(viewHolder);
                 convertView.setTag(R.id.request1, viewHolder.msg);
                 convertView.setTag(R.id.detailsBtn, viewHolder.detailBtn);
-                //convertView.setTag(R.id.minimum_amount,viewHolder.minimum_amount_text);
                 convertView.setTag(R.id.request_status1, viewHolder.msg_status);
             }
         } else {
@@ -115,7 +113,6 @@ public class Request_Adapter extends ArrayAdapter<Request_Msg> {
 
         viewHolder.msg.setText(list.get(position).getMsg());
         viewHolder.msg_status.setText(list.get(position).getStatus());
-        //viewHolder.minimum_amount_text.setText(new Double(list.get(position).getMinimum_amount()).toString());
         return convertView;
     }
 

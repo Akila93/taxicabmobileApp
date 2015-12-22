@@ -38,6 +38,10 @@ public class SignUpActivity extends Activity {
         signupBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                //u can use customer.isChecked(); method to signup as a customer or driver
+                //some fields are not editable in customer mode,driver mode since they are not required for db.
+                //code here.read JSONfunction.java for more.
                 Intent startIntent = new Intent("com.app.taxi.service.MAIN_TABHOST_WINDOW");
                 startIntent.putExtra("isCustomer",customer.isChecked());
                 startActivity(startIntent);

@@ -2,6 +2,7 @@ package com.app.service.taxi.taxiserviceapp;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.ToggleButton;
@@ -25,6 +26,15 @@ public class RequestsActivity extends Activity {
         this.isCustomer = getIntent().getBooleanExtra("isCustomer", true);
 
         this.onlineBtn = (ToggleButton)findViewById(R.id.btnOnline);
+
+        this.onlineBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                //write code to set db->driver->avalability using json.
+                //example ->loginActivity.java and php file in group chat
+                //read About ToggleButton methods.
+            }
+        });
         this.listView = (ListView) findViewById(R.id.request_list);
         if(this.isCustomer) {
             this.onlineBtn.setEnabled(false);
@@ -39,6 +49,9 @@ public class RequestsActivity extends Activity {
     }
 
     public List<Request_Msg> getRequests(){
+        // here u need to read database for request and add them to list.
+        //better if u can manage list as a stack since recent request should notice first by users
+        // limit list items 10-20.
         list.add(new Request_Msg("I want to go Nuwara. I'm from kurunagala."));
         list.add(new Request_Msg("I want to go Galle. I'm from wakwalla."));
         list.add(new Request_Msg("I want to go Galle. I'm from wakwalla."));
