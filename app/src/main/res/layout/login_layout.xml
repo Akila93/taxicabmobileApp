@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<LinearLayout xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="User name"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp"/>
+    <edu.ubbdroid.android.widget.EditText
+        android:id="@+id/loginUser"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"/>
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textSize="25dp"
+        android:layout_marginBottom="10dp"/>
+
+    <edu.ubbdroid.android.widget.EditText
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="textPassword"
+        android:ems="10"
+        android:id="@+id/loginPass"
+        android:layout_marginBottom="20dp"/>
+
+
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Customer"
+        android:textSize="25dp"
+        android:id="@+id/radioBtnCustomer"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"/>
+    <RadioButton
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Driver"
+        android:textSize="25dp"
+        android:id="@+id/radioBtnDriver"
+        android:layout_gravity="center"
+        android:layout_marginBottom="10dp"/>
+
+    <Button
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Login"
+        android:textSize="25dp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:id="@+id/btnLogin"/>
+
+
+</LinearLayout></ScrollView>
